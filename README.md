@@ -51,6 +51,9 @@ Add this to your `<head>` section:
 ```html
 https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/gameboy.css
 ```
+```html
+https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/gameboy.js
+```
 
 ### Via Package Manager
 
