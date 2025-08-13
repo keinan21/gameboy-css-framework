@@ -503,7 +503,7 @@ summary::-webkit-details-marker {
 }
 
 summary::before {
-  content: url(/assets/triangle.webp);
+  content: url(https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/assets/triangle.webp);
   font-size: var(--font-size-sm);
   position: absolute;
   left: 0;
@@ -610,15 +610,15 @@ ul li::before {
 }
 
 ul.star li::before {
-  content: url(/assets/star.webp);
+  content: url(https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/assets/star.webp);
 }
 
 ul.coin li::before {
-  content: url(/assets/coin.webp);
+  content: url(https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/assets/coin.webp);
 }
 
 ul.goombo li::before {
-  content: url(/assets/goombo.webp);
+  content: url(https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/assets/goombo.webp);
 }
 
 ol {
@@ -744,7 +744,7 @@ label input[type="checkbox"]:checked::after {
 }
 
 label input[type="radio"]:checked::after {
-  content: url(/assets/triangle.webp);
+  content: url(https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/assets/triangle.webp);
   position: absolute;
   top: -20%;
   left: 0;

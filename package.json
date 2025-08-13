@@ -1,0 +1,32 @@
+{
+  "name": "gameboy-css-framework",
+  "version": "1.0.0",
+  "description": "A lightweight, pixel-perfect CSS framework inspired by the classic Game Boy.",
+  "main": "gameboy.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keinan21/gameboy-css-framework.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "gameboy",
+    "retro",
+    "8-bit",
+    "pixel-art",
+    "nostalgia",
+    "nintendo",
+    "css-framework",
+    "css-library",
+    "libarary"
+  ],
+  "author": "keinan21",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keinan21/gameboy-css-framework/issues"
+  },
+  "homepage": "https://github.com/keinan21/gameboy-css-framework#readme"
+}
