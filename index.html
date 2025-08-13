@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gameboy.css - Showcase</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="gameboy.css" />
+    <link rel="shortcut icon" href="assets/logo.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="gb-header">
+      <div class="gb-logo">GAMEBOY.css</div>
+      <nav>
+        <ul class="gb-nav-list">
+          <li><a href="#" class="gb-nav-link">Github</a></li>
+          <li><a href="/comparisson.html" class="gb-nav-link">Preview</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gb-hero">
+        <h1>GAMEBOY.CSS</h1>
+        <img
+          width="100"
+          class="no-border"
+          src="/assets/gameboy.webp"
+          alt="Game Boy console image"
+        />
+        <p>The pixel-perfect CSS framework for retro-inspired projects.</p>
+        <button type="button" class="button primary">Get Started</button>
+      </section>
+       <details>
+        <summary>Show Code</summary>
+        <pre><code>
+&lt;section class="gb-hero"&gt;
+  &lt;h1&gt;GAMEBOY.CSS&lt;/h1&gt;
+  &lt;img width="100" class="no-border" src="/assets/gameboy.webp" alt="Game Boy console image" /&gt;
+  &lt;p&gt;The pixel-perfect CSS framework for retro-inspired projects.&lt;/p&gt;
+  &lt;button type="button" class="button primary"&gt;Get Started&lt;/button&gt;
+&lt;/section&gt;
+        </code></pre>
+      </details>
+
+      <hr />
+
+      <section id="containers">
+        <h2>Card</h2>
+        <p>Use these containers to hold various in-game information.</p>
+
+        <article class="gb-card">
+          <h3 class="title">Game Save File</h3>
+          <p>This is a brief description of your saved game file.</p>
+        </article>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;article class="gb-card"&gt;
+  &lt;h3 class="title"&gt;Game Save File&lt;/h3&gt;
+  &lt;p&gt;This is a brief description of your saved game file.&lt;/p&gt;
+&lt;/article&gt;
+          </code></pre>
+        </details>
+
+        <br>
+
+        <div class="gb-card primary">
+          <h4 class="title">Item Card</h4>
+          <p>A simple card container to display an item in your inventory.</p>
+        </div>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;div class="gb-card primary"&gt;
+  &lt;h4 class="title"&gt;Item Card&lt;/h4&gt;
+  &lt;p&gt;A simple card container to display an item in your inventory.&lt;/p&gt;
+&lt;/div&gt;
+          </code></pre>
+        </details>
+
+        <br>
+
+        <div class="gb-card secondary">
+          <h4 class="title">Quest Complete!</h4>
+          <p>A success message after finishing a quest.</p>
+        </div>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;div class="gb-card secondary"&gt;
+  &lt;h4 class="title"&gt;Quest Complete!&lt;/h4&gt;
+  &lt;p&gt;A success message after finishing a quest.&lt;/p&gt;
+&lt;/div&gt;
+          </code></pre>
+        </details>
+
+        <br>
+
+        <div class="gb-card pokemon-card">
+          <img
+            src="assets/tiny-ball.webp"
+            class="no-border pokemon-corner pokemon-corner-top-left"
+            alt="tiny ball"
+          />
+          <img
+            src="assets/tiny-ball.webp"
+            class="no-border pokemon-corner pokemon-corner-top-right"
+            alt="tiny ball"
+          />
+          <img
+            src="assets/tiny-ball.webp"
+            class="no-border pokemon-corner pokemon-corner-bottom-left"
+            alt="tiny ball"
+          />
+          <img
+            src="assets/tiny-ball.webp"
+            class="no-border pokemon-corner pokemon-corner-bottom-right"
+            alt="tiny ball"
+          />
+          <h3 class="title">Pikachu Stats</h3>
+          <p>HP: 20</p>
+          <p>ATTACK: 11</p>
+          <p>DEFENSE: 8</p>
+        </div>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;div class="gb-card pokemon-card"&gt;
+  &lt;img src="assets/tiny-ball.webp" class="no-border pokemon-corner pokemon-corner-top-left"&gt;&lt;/img&gt;
+  &lt;img src="assets/tiny-ball.webp" class="no-border pokemon-corner pokemon-corner-top-right"&gt;&lt;/img&gt;
+  &lt;img src="assets/tiny-ball.webp" class="no-border pokemon-corner pokemon-corner-bottom-left"&gt;&lt;/img&gt;
+  &lt;img src="assets/tiny-ball.webp" class="no-border pokemon-corner pokemon-corner-bottom-right"&gt;&lt;/img&gt;
+  &lt;h3 class="title"&gt;Pikachu Stats&lt;/h3&gt;
+  &lt;p&gt;HP: 20&lt;/p&gt;
+  &lt;p&gt;ATTACK: 11&lt;/p&gt;
+  &lt;p&gt;DEFENSE: 8&lt;/p&gt;
+&lt;/div&gt;
+          </code></pre>
+        </details>
+
+        <br>
+
+        <section class="gb-grid">
+          <div class="gb-card">
+            <h4 class="title">World 1-1</h4>
+            <p>The first level with mushrooms and coins.</p>
+          </div>
+          <div class="gb-card">
+            <h4 class="title">World 1-2</h4>
+            <p>An underground level filled with puzzles.</p>
+          </div>
+          <div class="gb-card">
+            <h4 class="title">World 1-3</h4>
+            <p>An above-the-clouds level, be careful not to fall!</p>
+          </div>
+          <div class="gb-card">
+            <h4 class="title">World 1-4</h4>
+            <p>The first castle, get ready for the boss fight!</p>
+          </div>
+        </section>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;section class="gb-grid"&gt;
+  &lt;div class="gb-card"&gt;
+    &lt;h4 class="title"&gt;World 1-1&lt;/h4&gt;
+    &lt;p&gt;The first level with mushrooms and coins.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="gb-card"&gt;
+    &lt;h4 class="title"&gt;World 1-2&lt;/h4&gt;
+    &lt;p&gt;An underground level filled with puzzles.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+          </code></pre>
+        </details>
+
+        <br>
+
+        <button type="button" data-gb-dialog-target="#example-dialog">
+          Show Dialog
+        </button>
+
+        <dialog id="example-dialog">
+          <p>This is a dialog box. Press A to continue.</p>
+          <form method="dialog">
+            <button>OK</button>
+          </form>
+        </dialog>
+      </section>
+
+              <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;button type="button" data-gb-dialog-target="#example-dialog"&gt;
+  Show Dialog
+&lt;/button&gt;
+
+&lt;dialog id="example-dialog"&gt;
+  &lt;p&gt;This is a dialog box. Press A to continue.&lt;/p&gt;
+  &lt;form method="dialog"&gt;
+    &lt;button&gt;OK&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;
+          </code></pre>
+        </details>
+
+      <hr />
+
+      <section id="typography">
+        <h2>Typography</h2>
+        <p>This is how various text types will appear in your game.</p>
+
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h1&gt;Header 1&lt;/h1&gt;
+&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h3&gt;Header 3&lt;/h3&gt;
+&lt;h4&gt;Header 4&lt;/h4&gt;
+&lt;h5&gt;Header 5&lt;/h5&gt;
+&lt;h6&gt;Header 6&lt;/h6&gt;
+          </code></pre>
+        </details>
+
+        <p>
+          This is a paragraph of the story. It contains
+          <strong>monster descriptions</strong>, <em>spells you've learned</em>,
+          and a <a href="#">link Awakening</a>. Don't forget to
+          <mark>highlight</mark> important hints from NPCs!
+        </p>
+
+        <blockquote>
+          "Hello! Sorry I'm not home, but I have gone to rescue my friends who were captured by Bowser."
+          <cite>- Yoshi 🐾</cite>
+        </blockquote>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;blockquote&gt;
+  "It's dangerous to go alone! Take this."
+  &lt;cite&gt;- Old Man&lt;/cite&gt;
+&lt;/blockquote&gt;
+          </code></pre>
+        </details>
+
+        <pre><code>
+// Code blocks should look retro!
+function onStart() {
+  console.log("Welcome to Hyrule!");
+}
+        </code></pre>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;pre&gt;&lt;code&gt;
+  // Code blocks should look retro!
+  function onStart() {
+    console.log("Welcome to Hyrule!");
+  }
+&lt;/code&gt;&lt;/pre&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <hr />
+
+      <section id="header-footer-showcase">
+        <h2>Header</h2>
+        <h4>Header Component</h4>
+        <p>The header is always at the top of the page.</p>
+        <br />
+        <header class="gb-header">
+          <div class="gb-logo">GAMEBOY</div>
+          <nav>
+            <ul class="gb-nav-list">
+              <li><a href="#" class="gb-nav-link">Home</a></li>
+              <li><a href="#" class="gb-nav-link">About</a></li>
+              <li><a href="#" class="gb-nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;header class="gb-header"&gt;
+  &lt;div class="gb-logo"&gt;GAMEBOY&lt;/div&gt;
+  &lt;nav&gt;
+    &lt;ul class="gb-nav-list"&gt;
+      &lt;li&gt;&lt;a href="#" class="gb-nav-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="gb-nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="gb-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+          </code></pre>
+        </details>
+
+        <br />
+        <header class="gb-header">
+          <div class="gb-logo">
+            <img
+              class="img-avatar no-border"
+              src="/assets/logo.webp"
+              alt="gameboy logo"
+            />
+          </div>
+          <nav>
+            <ul class="gb-nav-list">
+              <li><a href="#" class="gb-nav-link">Home</a></li>
+              <li><a href="#" class="gb-nav-link">About</a></li>
+              <li><a href="#" class="gb-nav-link">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;header class="gb-header"&gt;
+  &lt;div class="gb-logo"&gt;&lt;img class="img-avatar no-border" src="/assets/logo.webp" alt="gameboy logo"&gt;&lt;/div&gt;
+  &lt;nav&gt;
+    &lt;ul class="gb-nav-list"&gt;
+      &lt;li&gt;&lt;a href="#" class="gb-nav-link"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="gb-nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="gb-nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+          </code></pre>
+        </details>
+
+        <br />
+        <header class="gb-header">
+          <div class="gb-logo">GAMEBOY</div>
+        </header>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;header class="gb-header"&gt;
+  &lt;div class="gb-logo"&gt;GAMEBOY&lt;/div&gt;
+&lt;/header&gt;
+          </code></pre>
+        </details>
+
+        <br />
+        <header class="gb-header">
+          <div class="gb-logo">GAMEBOY</div>
+          <nav>
+            <ul class="gb-nav-list">
+              <li>
+                <button><a href="#">Action</a></button>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;header class="gb-header"&gt;
+  &lt;div class="gb-logo"&gt;GAMEBOY&lt;/div&gt;
+  &lt;nav&gt;
+    &lt;ul class="gb-nav-list"&gt;
+      &lt;li&gt;&lt;button&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <hr />
+
+      <section id="interactive">
+        <h2>Interactive Elements</h2>
+        <p>
+          Interactive elements that can be found in game menus or on screen.
+        </p>
+
+        <h3>Buttons</h3>
+        <p>
+          <button type="button">START</button>
+          <button type="button" class="button dark">SAVE GAME</button>
+          <button type="button" class="button border">LOAD GAME</button>
+          <button type="button" disabled>DISABLED</button>
+        </p>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;button type="button"&gt;Default&lt;/button&gt;
+&lt;button type="button" class="button dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="button border"&gt;Border&lt;/button&gt;
+&lt;button type="button" disabled&gt;Disabled&lt;/button&gt;
+          </code></pre>
+        </details>
+
+        <h3>Details (Accordion)</h3>
+        <details>
+          <summary>Default</summary>
+          <p>A legendary sword said to seal the darkness.</p>
+        </details>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;details&gt;
+  &lt;summary&gt;Default&lt;/summary&gt;
+  &lt;p&gt;A legendary sword said to seal the darkness.&lt;/p&gt;
+&lt;/details&gt;
+          </code></pre>
+        </details>
+        <br />
+        <details class="detail-card">
+          <summary>.detail-card</summary>
+          <p>A legendary sword said to seal the darkness.</p>
+        </details>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;details class="detail-card"&gt;
+  &lt;summary&gt;Default&lt;/summary&gt;
+  &lt;p&gt;A legendary sword said to seal the darkness.&lt;/p&gt;
+&lt;/details&gt;
+          </code></pre>
+        </details>
+
+        <p>.detail-group</p>
+        <div class="detail-group">
+          <details>
+            <summary>Item Potion</summary>
+            <p>Heals 20 HP.</p>
+          </details>
+          <details>
+            <summary>Item Ether</summary>
+            <p>Restores 50 MP.</p>
+          </details>
+          <details>
+            <summary>Item Phoenix Down</summary>
+            <p>Revives a fallen ally.</p>
+          </details>
+        </div>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;div class="detail-group"&gt;
+  &lt;details&gt;...&lt;/details&gt;
+  &lt;details&gt;...&lt;/details&gt;
+  &lt;details&gt;...&lt;/details&gt;
+&lt;/div&gt;
+          </code></pre>
+        </details>
+
+        <h3>Progress Bar</h3>
+        <p>Loading saved data...</p>
+        <progress value="75" max="100"></progress>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h3&gt;Progress Bar&lt;/h3&gt;
+&lt;p&gt;Loading saved data...&lt;/p&gt;
+&lt;progress value="75" max="100"&gt;&lt;/progress&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <hr />
+
+      <section id="lists">
+        <h2>Lists</h2>
+        <p>Different list styles for in-game inventory or items.</p>
+
+        <h3>Unordered List Default</h3>
+        <ul>
+          <li>Potion</li>
+          <li>Ether</li>
+          <li>Phoenix Down</li>
+        </ul>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Potion&lt;/li&gt;
+  &lt;li&gt;Ether&lt;/li&gt;
+  &lt;li&gt;Phoenix Down&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </details>
+
+        <h3>Unordered List Star</h3>
+        <ul class="star">
+          <li>Starman</li>
+          <li>Super Star</li>
+          <li>Power Star</li>
+        </ul>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul class="star"&gt;
+  &lt;li&gt;Starman&lt;/li&gt;
+  &lt;li&gt;Super Star&lt;/li&gt;
+  &lt;li&gt;Power Star&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </details>
+
+        <h3>Unordered List Coin</h3>
+        <ul class="coin">
+          <li>100 Gold</li>
+          <li>10 Silver</li>
+          <li>1 Bronze</li>
+        </ul>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul class="coin"&gt;
+  &lt;li&gt;100 Gold&lt;/li&gt;
+  &lt;li&gt;10 Silver&lt;/li&gt;
+  &lt;li&gt;1 Bronze&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </details>
+
+        <h3>Unordered List Goombo (Goomba's friend)</h3>
+        <ul class="goombo">
+          <li>Goomba</li>
+          <li>Koopa</li>
+          <li>Piranha Plant</li>
+        </ul>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h3&gt;Unordered List&lt;/h3&gt;
+&lt;ul class="goombo"&gt;
+  &lt;li&gt;Goomba&lt;/li&gt;
+  &lt;li&gt;Koopa&lt;/li&gt;
+  &lt;li&gt;Piranha Plant&lt;/li&gt;
+&lt;/ul&gt;
+          </code></pre>
+        </details>
+
+        <h3>Ordered List</h3>
+        <ol>
+          <li>Choose your starter</li>
+          <li>Battle your rival</li>
+          <li>Become the champion</li>
+        </ol>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;h3&gt;Ordered List&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Choose your starter&lt;/li&gt;
+  &lt;li&gt;Battle your rival&lt;/li&gt;
+  &lt;li&gt;Become the champion&lt;/li&gt;
+&lt;/ol&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <hr />
+
+      <section id="forms">
+        <h2>Forms</h2>
+        <p>Form styles for player registration or game settings menu.</p>
+
+        <form>
+          <fieldset>
+            <legend>New Player Registration</legend>
+
+            <label for="name">Player Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g., Mario"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="mario@kingdom.com"
+            />
+
+            <label for="character-select">Choose Character:</label>
+            <select id="character-select" name="character">
+              <option value="">--Please choose an option--</option>
+              <option value="mario">Mario</option>
+              <option value="link">Link</option>
+              <option value="kirby">Kirby</option>
+            </select>
+
+            <label>Confirm Starter:</label>
+            <label
+              ><input type="radio" name="starter" value="bulbasaur" checked />
+              Bulbasaur</label
+            >
+            <label
+              ><input type="radio" name="starter" value="charmander" />
+              Charmander</label
+            >
+            <label
+              ><input type="radio" name="starter" value="squirtle" />
+              Squirtle</label
+            >
+
+            <label for="comments">Comments:</label>
+            <textarea
+              id="comments"
+              name="comments"
+              rows="4"
+              placeholder="Your adventure awaits..."
+            ></textarea>
+
+            <label
+              ><input type="checkbox" name="terms" required /> I agree to the
+              adventure terms.</label
+            >
+
+            <input type="submit" value="Press Start" />
+          </fieldset>
+        </form>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;New Player Registration&lt;/legend&gt;
+
+    &lt;label for="name"&gt;Player Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" placeholder="e.g., Mario" /&gt;
+    
+    &lt;!-- ... more form elements ... --&gt;
+    
+    &lt;input type="submit" value="Press Start" /&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <section id="media-tables">
+        <h2>Media & Tables</h2>
+        <p>Displaying media and tables, as seen in game menus.</p>
+
+        <figure>
+          <img src="/assets/mario-land.webp" alt="The legendary device" />
+          <figcaption>
+            Fig. 1 - The legendary device for an adventure.
+          </figcaption>
+        </figure>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;figure&gt;
+  &lt;img src="/assets/mario-land.webp" alt="The legendary device"&gt;
+  &lt;figcaption&gt;Fig. 1 - The legendary device for an adventure.&lt;/figcaption&gt;
+&lt;/figure&gt;
+          </code></pre>
+        </details>
+
+        <table>
+          <caption>
+            High Scores
+          </caption>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>MARIO</td>
+              <td>999990</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>LUIGI</td>
+              <td>754320</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>ZELDA</td>
+              <td>640000</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>KIRBY</td>
+              <td>450000</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>SAMUS</td>
+              <td>387500</td>
+            </tr>
+          </tbody>
+        </table>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;table&gt;
+  &lt;caption&gt;High Scores&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Rank&lt;/th&gt;
+      &lt;th&gt;Player&lt;/th&gt;
+      &lt;th&gt;Score&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;MARIO&lt;/td&gt;
+      &lt;td&gt;999990&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;LUIGI&lt;/td&gt;
+      &lt;td&gt;754320&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;...&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <hr />
+
+      <section id="utilities">
+        <h2>Utility Classes</h2>
+        <p>Helper classes to quickly adjust elements.</p>
+
+        <h3>Text Sizing</h3>
+        <p class="text-xs">This is an extra-small text (text-xs).</p>
+        <p class="text-sm">This is a small text (text-sm).</p>
+        <p class="text-md">This is a medium text (text-md).</p>
+        <p class="text-lg">This is a large text (text-lg).</p>
+        <p class="text-xl">This is an extra-large text (text-xl).</p>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;p class="text-xs"&gt;...&lt;/p&gt;
+&lt;p class="text-sm"&gt;...&lt;/p&gt;
+&lt;p class="text-md"&gt;...&lt;/p&gt;
+&lt;p class="text-lg"&gt;...&lt;/p&gt;
+&lt;p class="text-xl"&gt;...&lt;/p&gt;
+          </code></pre>
+        </details>
+
+        <br>
+
+        <h3>Text Colors</h3>
+        <p class="text-dark">This text is dark gray.</p>
+        <p class="text-primary">This text uses the primary color.</p>
+        <p class="text-secondary">This text uses the secondary color.</p>
+        <div class="gb-card secondary no-border no-shadow">
+          <p class="text-light">This text is light.</p>
+        </div>
+        
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;p class="text-dark"&gt;...&lt;/p&gt;
+&lt;p class="text-primary"&gt;...&lt;/p&gt;
+&lt;p class="text-secondary"&gt;...&lt;/p&gt;
+&lt;p class="text-light"&gt;...&lt;/p&gt;
+          </code></pre>
+        </details>
+
+        <br />
+        <h3>Container Utilities</h3>
+        <div class="gb-card primary">
+          <h4>Default Container</h4>
+          <p>This container has a default shadow and border.</p>
+        </div>
+        <div class="gb-card primary no-shadow">
+          <h4>No Shadow</h4>
+          <p>This container has no shadow but keeps its border.</p>
+        </div>
+        <div class="gb-card primary no-shadow no-border">
+          <h4>No Shadow, No Border</h4>
+          <p>This container has a completely flat design.</p>
+        </div>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;div class="gb-card primary"&gt;...&lt;/div&gt;
+&lt;div class="gb-card primary no-shadow"&gt;...&lt;/div&gt;
+&lt;div class="gb-card primary no-shadow no-border"&gt;...&lt;/div&gt;
+          </code></pre>
+        </details>
+
+        <h3>Default Responsive Image</h3>
+        <img
+          src="/assets/mario-land.webp"
+          alt="Mario Land"
+          style="width: 250px"
+        />
+        <p class="text-sm">
+          The image above is responsive by default (max-width: 100%) and has a
+          border. you can adjust the size using width inline styling.
+        </p>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;img src="/assets/mario-land.webp" alt="Mario Land" style="width: 250px;"&gt;
+          </code></pre>
+        </details>
+
+        <br />
+        <h3>Image Avatar</h3>
+        <img src="/assets/logo.webp" alt="Player Avatar" class="img-avatar" />
+        <p class="text-sm">
+          The image above uses the `.img-avatar` class to make it circular.
+        </p>
+        <details>
+          <summary>Show Code</summary>
+          <pre><code>
+&lt;img src="/assets/logo.webp" alt="Player Avatar" class="img-avatar"&gt;
+          </code></pre>
+        </details>
+      </section>
+
+      <hr>
+
+      <section id="contributors">
+        <h2>Contributors</h2>
+        <p>A big thanks to the people who helped make this project possible.</p>
+        
+        <div class="gb-grid">
+          <div style="text-align: center;" class="gb-card">
+            <img class="img-avatar" src="https://avatars.githubusercontent.com/u/142227388?s=400&u=4bd6ad385064e7ea8a80572c1f59220af05e98dd&v=4" />
+            <h4>Keinan21</h4>
+            <p class="text-sm">Creator</p>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+
+    <footer>
+      <div class="gb-footer">
+        <p>&copy; 2025 Gameboy.css</p>
+        <p><a class="text-light" href="#">Press START to continue</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

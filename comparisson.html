@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarasaland Under Attack - A News Article</title>
+    <link rel="stylesheet" href="gameboy.css" id="gameboy-styles" />
+    <link rel="shortcut icon" href="assets/logo.webp" type="image/x-icon" />
+    <style>
+      .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: #8d8d8d;
+        border: 2px solid #000;
+        border-radius: 0;
+        color: #fff;
+      }
+    .comment {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="gb-header">
+      <div class="gb-logo">SARASALAND NEWS</div>
+      <nav>
+        <ul class="gb-nav-list">
+          <li><a href="/index.html" class="gb-nav-link">Back</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="gb-card">
+        <h1>Sarasaland Under Threat: Princess Daisy Kidnapped by Tatanga</h1>
+        <p class="text-sm">Posted by our correspondent in the Chai Kingdom</p>
+        <img src="https://i.pinimg.com/736x/4e/df/97/4edf9726b05d5c87d0959b34ed7c1903.jpg" alt="Princess Daisy kidnapped by Tatanga" class="no-border" style="width: 100%;">
+        <p>
+          Once upon a time, there was a peaceful world called Sarasaland. One day, the skies of Sarasaland were suddenly covered by a huge black cloud. From a crack in this cloud, the unknown space monster Tatanga emerged to try to conquer Sarasaland. Tatanga hypnotized the people of all four kingdoms—Birabuto, Muda, Easton and Chai—so that he could control them in any way he liked. In this way he took over Sarasaland.
+        </p>
+        <p>
+          Now, he wants to marry Princess Daisy of Sarasaland and make her his queen. Mario came to know of these events, and he has started on a journey to the Chai Kingdom where Princess Daisy is held captive, in order to restore peace to Sarasaland.
+        </p>
+        <p>
+          Can Mario defeat Tatanga, release people from his interstellar hypnosis, and rescue Princess Daisy? It's all up to you and Mario's skill. Go for it Mario!
+        </p>
+        <p class="text-xs">
+          (This article is based on the plot summary from the Super Mario Wiki, available under a Creative Commons license. Source: <a href="https://www.mariowiki.com/Super_Mario_Land">https://www.mariowiki.com/Super_Mario_Land</a>)
+        </p>
+      </article>
+
+      <div class="gb-card secondary" style="margin-top: 20px;">
+        <h3>Comments (3)</h3>
+
+        <div class="gb-card">
+          <div class="comment">
+            <img width="50" src="https://www.spriters-resource.com/resources/sheet_icons/110/112885.png?updated=1563465493" alt="Mario's Avatar" class="img-avatar">
+            <div class="comment-content">
+              <p class="comment-author">Mario</p>
+              <p class="comment-date">2 hours ago</p>
+              <p>It's-a me, on my way! That Tatanga won't know what hit him!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gb-card">
+          <div class="comment">
+            <img width="50" src="https://gamebanana.com/mods/embeddables/9928?variant=sd_image" alt="Sarasaland Citizen Avatar" class="img-avatar">
+            <div class="comment-content">
+              <p class="comment-author">Birabuto Citizen</p>
+              <p class="comment-date">1 hour ago</p>
+              <p>We are still under Tatanga's spell, but we have hope! Go, Mario!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gb-card">
+          <div class="comment">
+            <img width="50" src="https://mario.wiki.gallery/images/c/ce/SMLGoombo.gif" alt="Anonymous Avatar" class="img-avatar">
+            <div class="comment-content">
+              <p class="comment-author">Anonymous</p>
+              <p class="comment-date">30 minutes ago</p>
+              <p>This is all Tatanga's fault. He's a menace to the galaxy. Save us, Mario!</p>
+            </div>
+          </div>
+        </div>
+
+        <form>
+          <fieldset>
+            <legend>Leave a Comment</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Hero of Sarasaland" />
+            <label for="comment">Your Comment:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Let's-a go!" ></textarea>
+            <input type="submit" value="Submit Comment" />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+  <div class="gb-footer">
+    <p class="text-xs">
+      This is a fan-made project. All copyrights, characters, and materials related to Super Mario Land are the intellectual property of Nintendo. This project is not affiliated with or endorsed by Nintendo.
+    </p>
+  </div>
+</footer>
+    
+    <button id="toggle-button" class="floating-button">Disable Gameboy.css</button>
+    <script>
+      const gameboyStyles = document.getElementById('gameboy-styles');
+      const toggleButton = document.getElementById('toggle-button');
+
+      toggleButton.addEventListener('click', () => {
+        if (gameboyStyles.disabled) {
+          gameboyStyles.disabled = false;
+          toggleButton.textContent = 'Disable Gameboy.css';
+        } else {
+          gameboyStyles.disabled = true;
+          toggleButton.textContent = 'Enable Gameboy.css';
+        }
+      });
+    </script>
+  </body>
+</html>

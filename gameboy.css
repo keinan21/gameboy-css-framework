@@ -1,0 +1,940 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+/*
+====================================
+ Gameboy.css - Root Variables
+====================================
+*/
+
+:root {
+  /* font family */
+  --font-family-pixel: "Silkscreen", sans-serif;
+  /* color */
+  --gb-color-lightest: #e0f8d0;
+  --gb-color-light: #88c070;
+  --gb-color-dark: #346856;
+  --gb-color-darkest: #081820;
+  --gb-color-dark-gray: #555;
+  --gb-color-light-gray: #888;
+  /* font size */
+  --font-size-xs: 0.7rem; 
+  --font-size-sm: 0.8rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem; 
+  --font-size-xxl: 2.5rem; 
+  /* font weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+}
+
+/*
+====================================
+ Gameboy.css - Base & Typography
+====================================
+*/
+
+/* 1. Base Body Style */
+body {
+  font-family: var(--font-family-pixel);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+
+  background-color: var(--gb-color-lightest);
+  color: var(--gb-color-darkest);
+
+  line-height: 1.5;
+  margin: 0;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: var(--font-size-xxl); 
+}
+h2 {
+  font-size: var(--font-size-xl); 
+}
+h3 {
+  font-size: var(--font-size-lg); 
+}
+h4 {
+  font-size: var(--font-size-md); 
+}
+h5 {
+  font-size: var(--font-size-sm);
+}
+h6 {
+  font-size: var(--font-size-xs); 
+  color: var(--gb-color-dark);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-md);
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-bold);
+  color: var(--gb-color-dark);
+}
+
+em,
+i {
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+}
+
+mark {
+  background-color: var(--gb-color-light);
+  color: var(--gb-color-darkest);
+  padding: 0 0.2rem;
+  border-radius: 2px;
+}
+
+a {
+  color: var(--gb-color-dark);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Link State: Hover */
+a:hover {
+  color: var(--gb-color-darkest);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--gb-color-dark);
+}
+
+a:visited {
+  color: var(--gb-color-dark);
+}
+
+/*
+====================================
+ Gameboy.css - Header Component
+====================================
+*/
+
+.gb-header {
+  background-color: var(--gb-color-dark);
+  color: var(--gb-color-lightest);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 4px solid var(--gb-color-darkest);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.gb-header .gb-logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.gb-header .gb-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.gb-header .gb-nav-link {
+  color: var(--gb-color-lightest);
+  text-decoration: none;
+  font-size: var(--font-size-md);
+  padding: 0.25rem 0;
+  position: relative;
+}
+.gb-header .gb-nav-link:hover {
+    color: var(--gb-color-darkest);
+}
+
+.gb-header .gb-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background-color: var(--gb-color-lightest);
+  transition: width 0.2s ease-in-out;
+}
+
+.gb-header .gb-nav-link:hover::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .gb-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem; 
+  }
+
+  .gb-header .gb-logo {
+    margin-bottom: 1rem; 
+    font-size: var(--font-size-xl); 
+    position: relative;
+  }
+
+  .gb-header .gb-logo::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--gb-color-lightest);
+    translate: 0px 15px;
+  }
+
+  .gb-header .gb-nav-list {
+    flex-direction: row; 
+    gap: 1.5rem; 
+    justify-content: center; 
+    width: 100%;
+  }
+
+  .gb-header .gb-nav-link {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/*
+====================================
+ Gameboy.css - Main Layout & Sections
+====================================
+*/
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+main hr {
+  border: none;
+  height: 4px;
+  background-color: var(--gb-color-dark);
+  margin: 3rem 0;
+}
+
+/*
+====================================
+ Gameboy.css - Hero Section
+====================================
+*/
+
+.gb-hero {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  margin-bottom: 2rem;
+  min-height: 70vh;
+}
+
+.gb-hero h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: 1rem;
+}
+
+.gb-hero p {
+  font-size: var(--font-size-lg);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+====================================
+ Gameboy.css - Container Components
+====================================
+*/
+.gb-card {
+  border: 4px solid var(--gb-color-dark);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 0 0 var(--gb-color-darkest);
+  background-color: var(--gb-color-lightest);
+}
+
+.gb-card.primary {
+  background-color: var(--gb-color-light);
+}
+
+.gb-card.secondary {
+  background-color: #a7c58c; /* Varian hijau */
+}
+
+
+.pokemon-card {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--gb-color-lightest);
+  border: 4px solid var(--gb-color-dark);
+  box-shadow: none;
+}
+
+.pokemon-card::before {
+  content: '';
+  position: absolute;
+  top: 4px; 
+  left: 4px; 
+  right: 4px;
+  bottom: 4px; 
+  border: 2px solid var(--gb-color-dark);
+}
+
+.pokemon-card .pokemon-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px; 
+  
+}
+
+.pokemon-card .pokemon-corner-top-left {
+  top: -7px;
+  left: -7px;
+}
+
+.pokemon-card .pokemon-corner-top-right {
+  top: -7px;
+  right: -7px;
+}
+
+.pokemon-card .pokemon-corner-bottom-left {
+  bottom: -7px;
+  left: -7px;
+}
+
+.pokemon-card .pokemon-corner-bottom-right {
+  bottom: -7px;
+  right: -7px;
+}
+
+.gb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;
+}
+
+.gb-grid > .card {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .gb-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*
+====================================
+ Gameboy.css - Dialog & Pop-ups
+====================================
+*/
+
+dialog {
+  background-color: var(--gb-color-lightest);
+  border: 4px solid var(--gb-color-light);
+  padding: 1.5rem;
+  box-shadow: 6px 6px 0 0 var(--gb-color-darkest);
+  font-family: var(--font-family-pixel);
+  color: var(--gb-color-darkest);
+  max-width: 90%;
+}
+
+dialog::backdrop {
+  background-color: rgba(8, 24, 32, 0.7); /* Warna backdrop gelap, tapi transparan */
+}
+
+dialog p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+dialog form {
+  display: flex;
+  justify-content: flex-end; /* Tombol diletakkan di kanan */
+  gap: 1rem;
+}
+
+/*
+====================================
+ Gameboy.css - Typography: Blockquote
+====================================
+*/
+
+blockquote {
+  border-left: 8px solid var(--gb-color-dark);
+  margin: 0;
+  padding: 1rem 1.5rem;
+  background-color: var(--gb-color-light);
+  font-style: italic;
+  position: relative;
+}
+
+blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  color: var(--gb-color-dark);
+  text-align: right; 
+}
+
+/*
+====================================
+ Gameboy.css - Typography: Code Block
+====================================
+*/
+
+pre {
+  background-color: var(--gb-color-darkest);
+  color: var(--gb-color-lightest);
+  padding: 1rem;
+  overflow-x: auto;
+  border: 4px solid var(--gb-color-darkest);
+  box-shadow: 4px 4px 0 0 var(--gb-color-dark);
+}
+
+code {
+  font-family: var(--font-family-pixel);
+  font-size: var(--font-size-sm);
+  white-space: pre; 
+}
+
+/*
+====================================
+ Gameboy.css - Button Components
+====================================
+*/
+
+button, input[type="submit"] {
+  font-family: var(--font-family-pixel);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  padding: 0.5rem 1rem;
+  border: 4px solid var(--gb-color-darkest);
+  cursor: pointer;
+  box-shadow: 4px 4px 0 0 var(--gb-color-dark);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+button, input[type="submit"] {
+  background-color: var(--gb-color-light);
+  color: var(--gb-color-darkest);
+}
+
+.button.dark {
+  background-color: var(--gb-color-darkest);
+  color: var(--gb-color-lightest);
+  border: 4px solid var(--gb-color-darkest);
+}
+
+.button.border {
+  background-color: transparent;
+  color: var(--gb-color-darkest);
+  border: 4px solid var(--gb-color-darkest);
+}
+
+button:hover, input[type="submit"]:hover {
+  transform: translate(2px, 2px); 
+  box-shadow: 2px 2px 0 0 var(--gb-color-dark);
+}
+
+button:active, input[type="submit"]:active {
+  transform: translate(4px, 4px); 
+  box-shadow: 0 0 0 0 var(--gb-color-dark); /* Hilangkan bayangan sepenuhnya */
+}
+
+button:disabled, input[type="submit"]:disabled {
+  background-color: var(--gb-color-light-gray);
+  color: var(--gb-color-dark-gray);
+  border-color: var(--gb-color-dark-gray);
+  box-shadow: 4px 4px 0 0 var(--gb-color-dark-gray);
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/*
+====================================
+ Gameboy.css - Details (Accordion)
+====================================
+*/
+summary {
+  display: list-item;
+  list-style: none; 
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: url(/assets/triangle.webp);
+  font-size: var(--font-size-sm);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-43%);
+}
+
+details[open] summary::before {
+  transform: translateY(-40%) rotate(90deg);
+}
+
+details p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.detail-card {
+  border: 4px solid var(--gb-color-dark);
+  background-color: var(--gb-color-lightest);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 0 0 var(--gb-color-darkest);
+  border-radius: 0;
+}
+
+.detail-group {
+  border: 4px solid var(--gb-color-dark);
+  background-color: var(--gb-color-lightest);
+  box-shadow: 4px 4px 0 0 var(--gb-color-darkest);
+  margin-bottom: 1rem;
+}
+
+.detail-group details {
+  border-bottom: 2px solid var(--gb-color-dark);
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.detail-group details:last-child {
+  border-bottom: none;
+}
+
+
+/*
+====================================
+ Gameboy.css - Progress Bar
+====================================
+*/
+
+progress {
+  -webkit-appearance: none; /* Reset gaya default untuk Webkit (Chrome, Safari) */
+  -moz-appearance: none; /* Reset gaya default untuk Mozilla (Firefox) */
+  appearance: none; /* Reset gaya default standar */
+
+  width: 100%;
+  height: 20px;
+  background-color: var(--gb-color-lightest);
+  border: 4px solid var(--gb-color-darkest);
+
+}
+
+/* Gaya untuk bagian yang terisi di browser Webkit */
+progress::-webkit-progress-value {
+  background-color: var(--gb-color-light);
+}
+
+/* Gaya untuk latar belakang di browser Webkit */
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+/* Gaya untuk bagian yang terisi di browser Mozilla */
+progress::-moz-progress-bar {
+  background-color: var(--gb-color-dark);
+}
+
+/*
+====================================
+ Gameboy.css - Lists
+====================================
+*/
+
+/* Unordered List (ul) - Menggunakan ikon kustom */
+ul {
+  list-style: none; /* Hilangkan ikon default */
+  padding-left: 1.5rem; /* Beri jarak untuk ikon kustom */
+  margin: 0 0 1rem 0;
+}
+
+ul li {
+  position: relative; /* Penting untuk memposisikan ikon */
+  margin-bottom: 0.5rem;
+}
+
+ul li::before {
+  content: '⦁'; /* Ganti dengan karakter Unicode yang kamu suka */
+  position: absolute;
+  left: -10px;
+  transform: translateX(-100%);
+  color: var(--gb-color-dark); /* Ubah warna ikon */
+  font-weight: var(--font-weight-bold);
+}
+
+ul.star li::before {
+  content: url(/assets/star.webp);
+}
+
+ul.coin li::before {
+  content: url(/assets/coin.webp);
+}
+
+ul.goombo li::before {
+  content: url(/assets/goombo.webp);
+}
+
+ol {
+  list-style: none; /* Hilangkan penomoran default */
+  counter-reset: gb-counter; /* Reset counter */
+  padding-left: 0;
+  margin: 0 0 1rem 0;
+}
+
+ol li {
+  counter-increment: gb-counter; /* Tambahkan 1 ke counter */
+  position: relative;
+  padding-left: 2rem; /* Ruang untuk ikon kustom */
+  margin-bottom: 0.5rem;
+}
+
+ol li::before {
+  content:  counter(gb-counter) ")"; /* Tampilkan angka dan titik */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: var(--font-weight-bold);
+  color: var(--gb-color-dark);
+}
+
+/*
+====================================
+ Gameboy.css - Forms (Revisi)
+====================================
+*/
+
+fieldset {
+  border: 4px solid var(--gb-color-dark);
+  padding: 1rem 1.5rem 1.5rem;
+  background-color: var(--gb-color-lightest);
+  box-shadow: 4px 4px 0 0 var(--gb-color-darkest);
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--gb-color-darkest);
+  padding: 0.25rem 0.75rem;
+  margin-left: -0.75rem; /* Posisikan ke kiri agar menonjol */
+}
+
+/* Base style for input, select, and textarea */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  font-family: var(--font-family-pixel);
+  font-size: var(--font-size-md);
+  background-color: var(--gb-color-lightest);
+  border: 4px solid var(--gb-color-dark);
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Focus state */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--gb-color-darkest);
+  box-shadow: 0 0 0 2px var(--gb-color-darkest);
+}
+
+/* Textarea specific */
+textarea {
+  resize: vertical;
+}
+
+/* Radio and Checkbox (Custom styling) */
+label {
+  display: block; /* Memastikan setiap label berada di baris baru */
+  margin-bottom: 0.5rem;
+}
+
+label input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--gb-color-dark);
+  background-color: var(--gb-color-lightest);
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+label input[type="radio"] {
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: var(--gb-color-lightest);
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+label input[type="radio"]:focus{
+  border: none;
+}
+
+
+label input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--gb-color-dark);
+}
+
+label input[type="radio"]:checked::after {
+  content: url(/assets/triangle.webp);
+  position: absolute;
+  top: -20%;
+  left: 0;
+}
+
+/*
+====================================
+ Gameboy.css - Figure & Image
+====================================
+*/
+
+figure {
+  background-color: var(--gb-color-lightest);
+  border: 4px solid var(--gb-color-dark);
+  padding: 1rem;
+  box-shadow: 4px 4px 0 0 var(--gb-color-darkest);
+  margin: 0 0 1.5rem 0;
+  display: inline-block; /* Agar figure tidak mengambil lebar penuh */
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--gb-color-darkest);
+  display: block; /* Agar gambar tidak memiliki spasi di bawahnya */
+}
+
+figcaption {
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: 0.75rem;
+  color: var(--gb-color-dark);
+}
+
+/*
+====================================
+ Gameboy.css - Tables
+====================================
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 4px solid var(--gb-color-darkest);
+  background-color: var(--gb-color-lightest);
+  box-shadow: 4px 4px 0 0 var(--gb-color-dark);
+  margin-bottom: 2rem;
+}
+
+caption {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+  color: var(--gb-color-darkest);
+  text-align: center; /* Diubah menjadi center */
+}
+
+thead th {
+  background-color: var(--gb-color-dark);
+  color: var(--gb-color-lightest);
+  padding: 0.75rem;
+  text-align: left;
+  border-right: 2px solid var(--gb-color-darkest);
+  border-bottom: 2px solid var(--gb-color-darkest);
+}
+
+thead th:last-child {
+  border-right: none;
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-bottom: 2px solid var(--gb-color-dark);
+  border-left: 2px solid var(--gb-color-dark);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/*
+====================================
+ Gameboy.css - Footer
+====================================
+*/
+
+footer {
+  margin: 0;
+  background-color: var(--gb-color-dark);
+  color: var(--gb-color-lightest);
+  padding: 1rem 1.5rem;
+  border: 4px solid var(--gb-color-darkest);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gb-footer {
+  width: 100%;
+  max-width: 920px;
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gb-footer p {
+  margin: 0;
+}
+/* Penyesuaian untuk tampilan mobile */
+@media only screen and (max-width: 700px) {
+  .gb-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/*
+====================================
+ Gameboy.css - Utility Classes
+====================================
+*/
+
+/* 1. Text Sizing Utilities */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+
+/* 2. Style Removal Utilities */
+.no-shadow { box-shadow: none !important; }
+.no-border { border: none !important; }
+
+/* 3. Image Utilities */
+.img-avatar {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: var(--gb-color-light) 4px solid;
+}
+
+/* 4. Text Color Utilities */
+
+.text-dark {
+  color: var(--gb-color-dark-gray)  !important;
+}
+
+.text-primary {
+  color: var(--gb-color-darkest) !important;
+}
+
+.text-secondary {
+  color: var(--gb-color-light) !important;
+}
+
+.text-light {
+  color: var(--gb-color-lightest) !important;
+}
+
+/*
+====================================
+ Gameboy.css - Scrollbar
+====================================
+*/
+
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--gb-color-light);
+  border-radius: 0;
+  border-left: var(--gb-color-darkest) 1px solid;
+  border-right: var(--gb-color-darkest) 1px solid;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gb-color-dark); 
+  border-radius: 0;
+  border: var(--gb-color-darkest) 2px solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gb-color-light-gray);
+}
+
