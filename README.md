@@ -6,9 +6,9 @@
   The pixel-perfect CSS framework for retro-inspired projects. Bring the nostalgic look and feel of the classic Game Boy to your web applications.
 </p>
 
-[![npm package version](https://img.shields.io/npm/v/your-package-name)](https://www.npmjs.com/package/your-package-name)
-[![jsDelivr CDN](https://data.jsdelivr.com/v1/package/gh/your-username/your-repository/badge)](https://www.jsdelivr.com/package/gh/your-username/your-repository)
-[![GitHub license](https://img.shields.io/github/license/your-username/your-repository)](https://github.com/your-username/your-repository/blob/main/LICENSE)
+[![npm package version](https://img.shields.io/npm/v/gameboy-css-framework)](https://www.npmjs.com/package/gameboy-css-framework)
+[![jsDelivr CDN](https://data.jsdelivr.com/v1/package/gh/keinan21/gameboy-css-framework/badge)](https://www.jsdelivr.com/package/gh/keinan21/gameboy-css-framework)
+[![GitHub license](https://img.shields.io/github/license/keinan21/gameboy-css-framework)](https://github.com/keinan21/gameboy-css-framework/blob/main/LICENSE)
 
 
 ---
@@ -52,26 +52,24 @@ Add this to your `<head>` section:
 https://cdn.jsdelivr.net/gh/keinan21/gameboy-css-framework@v1.0.0/gameboy.css
 ```
 
-> Replace `your-username` and `your-repository` with your GitHub info.
-
 ### Via Package Manager
 
 Install via npm:
 
 ```bash
-npm install your-package-name
+npm i gameboy-css-framework
 ```
 
 Then include it in your HTML or main stylesheet:
 
 ```html
-<link rel="stylesheet" href="./node_modules/your-package-name/gameboy.css">
+<link rel="stylesheet" href="./node_modules/gameboy-css-framework/gameboy.css">
 ```
 
 Or via CSS import:
 
 ```css
-@import 'your-package-name/gameboy.css';
+@import 'gameboy-css-framework/gameboy.css';
 ```
 
 ---
